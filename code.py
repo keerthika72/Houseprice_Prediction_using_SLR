@@ -51,13 +51,13 @@ plt.show()
 
 # Lets predict the price for the some specified areas:
 y_560 = regressor.predict([[560]]) 
-y_890 = regressor.predict([[890]])
+y_200 = regressor.predict([[200]])
 print(y_560)
 print(y_890)
 
 
 bias = regressor.score(x_train, y_train)
-variance = regressor.score(x_test, y_test) #{test score} variance score for thr model.
+variance = regressor.score(x_test, y_test) 
 train_mse = mean_squared_error(y_train, regressor.predict(x_train)) 
 test_mse = mean_squared_error(y_test, y_pred) 
 
@@ -70,7 +70,7 @@ print(f"Test MSE: {test_mse:.2f}")
 filename = 'house price_prdiction.pkl'
 with open(filename, 'wb') as file:
     pickle.dump(regressor, file)
-print("Model has been pickled and saved as house price.pkl")
+print("Model has been pickled and saved as house price_prdiction.pkl")
 
 import os 
 print(os.getcwd())
