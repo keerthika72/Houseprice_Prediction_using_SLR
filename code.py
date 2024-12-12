@@ -53,7 +53,7 @@ plt.show()
 y_560 = regressor.predict([[560]]) 
 y_200 = regressor.predict([[200]])
 print(y_560)
-print(y_890)
+print(y_200)
 
 
 bias = regressor.score(x_train, y_train)
